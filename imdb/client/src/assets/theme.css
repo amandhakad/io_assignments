@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+p {
+    margin: 14px 0 0 0;
+}
+.movie_single {
+    width: 90%;
+    margin: auto;
+    border: solid 1px #e2e2e2;
+    border-radius: 4px;
+    padding: 24px 24px;
+    margin-top: 15px;
+}
+@media (max-width:  768px) {
+    .movie_single {
+        width: 98%;
+        text-align: center;
+    }
+}
+.member {
+    display: inline-block;
+    padding: 5px 20px 5px 0px;
+}
+.member .member-name {
+    margin: 0;
+    width: fit-content;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*.movie_single {
+    display: flex;
+    padding: 24px;
+}
+
+.movie_single .title {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+.movie_single .info {
+    font-size: 1.2em;
+}
+
+.movie_single .bio {
+    font-size: 1.2em;
+}
+.movie_single .member_section {
+    align-items: center;
+    margin-bottom: 1em;
+}
+.movie_single .member_actor {
+    width: 30%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+}
+.movie_single .member_producer {
+    width: 30%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+}
+.movie_single .member_section h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+*/
