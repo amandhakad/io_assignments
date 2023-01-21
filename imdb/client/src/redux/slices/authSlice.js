@@ -22,9 +22,6 @@ const authSlice = createSlice({
     setError: (state, action) => {
       state.error = action.payload
     },
-    // setUser: (state, action) => {
-    //   state.auth = action.payload;
-    // },
   },
   extraReducers: {
     // login reducers
@@ -39,7 +36,6 @@ const authSlice = createSlice({
       state.authToken = payload.authToken
     },
     [loginUser.rejected]: (state, { payload }) => {
-      console.log("p", payload);
       state.loading = false
       state.error = payload
     },
@@ -49,14 +45,12 @@ const authSlice = createSlice({
       state.error = null
     },
     [registerUser.fulfilled]: (state, { payload }) => {
-      console.log("p", payload);
       state.loading = false
       state.success = true // register+login successful
       state.userInfo = payload // registration also logs in
       state.authToken = payload.authToken // registration also logs in
     },
     [registerUser.rejected]: (state, { payload }) => {
-      console.log("payload", payload);
       state.loading = false
       state.error = payload
     },
