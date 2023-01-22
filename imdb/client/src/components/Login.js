@@ -22,6 +22,7 @@ function Login() {
   }, [authState.error]);
 
   useEffect(() => {
+    console.log("login side", authState, authState.authToken);
     if(authState.authToken) {
       message.success("Logged in!");
       return navigate("/");

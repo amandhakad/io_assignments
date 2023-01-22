@@ -1,8 +1,7 @@
 import React, {useEffect} from 'react';
 import Member from './Member';
-import { useSelector, useDispatch } from 'react-redux'
 import { Row, Col } from "antd";
-import { getMovies } from './../redux/actions/movieActions';
+import { useGetMoviesQuery } from './../api/moviesApi';
 
 const SingleMovie = ({data}) => {
 
@@ -32,21 +31,13 @@ const SingleMovie = ({data}) => {
 }
 
 const MovieList = () => {
-  const dispatch = useDispatch();
-  const movie = useSelector((state) => state.movie);
 
-  console.log("movie", movie.success);
-
-  useEffect(() => {
-    if(!movie.success) {
-      dispatch(getMovies())
-    }
-  }, []);
+  const { data=[], isLoading } = useGetMoviesQuery('');
 
   return (
     <div>
-      {movie.loading ? (<></>) : (
-        movie.movies.map((movie) => (
+      {isLoading ? (<>Loading</>) : (
+        data.map((movie) => (
           <SingleMovie key={movie.name} data={movie} />
         ))
       )}

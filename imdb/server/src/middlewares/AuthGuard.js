@@ -7,7 +7,7 @@ const AuthGuard = (req, res, next) => {
 
   jwt.verify(token, process.env.JWT_SECRET_KEY, (err, user) => {
     console.log(err)
-    if (err) return res.sendStatus(403)
+    if (err) return res.sendStatus(401)
     req.user = user
   console.log("tr: 1", req.user);
     next();
